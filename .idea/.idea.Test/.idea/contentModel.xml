@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\何鹏飞\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\何鹏飞\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Test.-308085055.00" t="ExcludeRecursive" />
+    <e p="C:\Users\何鹏飞\Documents\Test" t="IncludeFlat">
+      <e p="BBL" t="IncludeRecursive">
+        <e p="AdminBBL.cs" t="Include" />
+        <e p="BBL.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ManagerBBL.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DAL" t="IncludeRecursive">
+        <e p="admin.cs" t="Include" />
+        <e p="AdminDAL.cs" t="Include" />
+        <e p="App.Config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DAL.csproj" t="IncludeRecursive" />
+        <e p="manager.cs" t="Include" />
+        <e p="ManagerDAL.cs" t="Include" />
+        <e p="mis_manager.cs" t="Include" />
+        <e p="Model.Context.cs" t="Include" />
+        <e p="Model.Context.tt" t="Include" />
+        <e p="Model.cs" t="Include" />
+        <e p="Model.Designer.cs" t="Include" />
+        <e p="Model.edmx" t="Include" />
+        <e p="Model.edmx.diagram" t="Include" />
+        <e p="Model.tt" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Test.sln" t="IncludeFlat" />
+      <e p="Web" t="IncludeRecursive">
+        <e p="App_Data" t="Include" />
+        <e p="App_Start" t="Include">
+          <e p="BundleConfig.cs" t="Include" />
+          <e p="FilterConfig.cs" t="Include" />
+          <e p="RouteConfig.cs" t="Include" />
+          <e p="WebApiConfig.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Content" t="Include">
+          <e p="bootstrap-theme.css" t="Include" />
+          <e p="bootstrap-theme.css.map" t="Include" />
+          <e p="bootstrap-theme.min.css" t="Include" />
+          <e p="bootstrap-theme.min.css.map" t="Include" />
+          <e p="bootstrap.css" t="Include" />
+          <e p="bootstrap.css.map" t="Include" />
+          <e p="bootstrap.min.css" t="Include" />
+          <e p="bootstrap.min.css.map" t="Include" />
+          <e p="Site.css" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="LoginController.cs" t="Include" />
+          <e p="ManagerController.cs" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+        <e p="fonts" t="Include">
+          <e p="glyphicons-halflings-regular.eot" t="Include" />
+          <e p="glyphicons-halflings-regular.svg" t="Include" />
+          <e p="glyphicons-halflings-regular.ttf" t="Include" />
+          <e p="glyphicons-halflings-regular.woff" t="Include" />
+          <e p="glyphicons-halflings-regular.woff2" t="Include" />
+        </e>
+        <e p="Global.asax" t="Include" />
+        <e p="Global.asax.cs" t="Include" />
+        <e p="Img" t="Include">
+          <e p="dengru.png" t="Include" />
+        </e>
+        <e p="js" t="Include">
+          <e p="Addmanager.js" t="Include" />
+          <e p="Manager.js" t="Include" />
+        </e>
+        <e p="layui" t="Include">
+          <e p="css" t="Include">
+            <e p="layui.css" t="Include" />
+            <e p="layui.mobile.css" t="Include" />
+            <e p="modules" t="Include">
+              <e p="code.css" t="Include" />
+              <e p="laydate" t="Include">
+                <e p="default" t="Include">
+                  <e p="laydate.css" t="Include" />
+                </e>
+              </e>
+              <e p="layer" t="Include">
+                <e p="default" t="Include">
+                  <e p="icon-ext.png" t="Include" />
+                  <e p="icon.png" t="Include" />
+                  <e p="layer.css" t="Include" />
+                  <e p="loading-0.gif" t="Include" />
+                  <e p="loading-1.gif" t="Include" />
+                  <e p="loading-2.gif" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="font" t="Include">
+            <e p="iconfont.eot" t="Include" />
+            <e p="iconfont.svg" t="Include" />
+            <e p="iconfont.ttf" t="Include" />
+            <e p="iconfont.woff" t="Include" />
+            <e p="iconfont.woff2" t="Include" />
+          </e>
+          <e p="images" t="Include">
+            <e p="face" t="Include">
+              <e p="0.gif" t="Include" />
+              <e p="1.gif" t="Include" />
+              <e p="10.gif" t="Include" />
+              <e p="11.gif" t="Include" />
+              <e p="12.gif" t="Include" />
+              <e p="13.gif" t="Include" />
+              <e p="14.gif" t="Include" />
+              <e p="15.gif" t="Include" />
+              <e p="16.gif" t="Include" />
+              <e p="17.gif" t="Include" />
+              <e p="18.gif" t="Include" />
+              <e p="19.gif" t="Include" />
+              <e p="2.gif" t="Include" />
+              <e p="20.gif" t="Include" />
+              <e p="21.gif" t="Include" />
+              <e p="22.gif" t="Include" />
+              <e p="23.gif" t="Include" />
+              <e p="24.gif" t="Include" />
+              <e p="25.gif" t="Include" />
+              <e p="26.gif" t="Include" />
+              <e p="27.gif" t="Include" />
+              <e p="28.gif" t="Include" />
+              <e p="29.gif" t="Include" />
+              <e p="3.gif" t="Include" />
+              <e p="30.gif" t="Include" />
+              <e p="31.gif" t="Include" />
+              <e p="32.gif" t="Include" />
+              <e p="33.gif" t="Include" />
+              <e p="34.gif" t="Include" />
+              <e p="35.gif" t="Include" />
+              <e p="36.gif" t="Include" />
+              <e p="37.gif" t="Include" />
+              <e p="38.gif" t="Include" />
+              <e p="39.gif" t="Include" />
+              <e p="4.gif" t="Include" />
+              <e p="40.gif" t="Include" />
+              <e p="41.gif" t="Include" />
+              <e p="42.gif" t="Include" />
+              <e p="43.gif" t="Include" />
+              <e p="44.gif" t="Include" />
+              <e p="45.gif" t="Include" />
+              <e p="46.gif" t="Include" />
+              <e p="47.gif" t="Include" />
+              <e p="48.gif" t="Include" />
+              <e p="49.gif" t="Include" />
+              <e p="5.gif" t="Include" />
+              <e p="50.gif" t="Include" />
+              <e p="51.gif" t="Include" />
+              <e p="52.gif" t="Include" />
+              <e p="53.gif" t="Include" />
+              <e p="54.gif" t="Include" />
+              <e p="55.gif" t="Include" />
+              <e p="56.gif" t="Include" />
+              <e p="57.gif" t="Include" />
+              <e p="58.gif" t="Include" />
+              <e p="59.gif" t="Include" />
+              <e p="6.gif" t="Include" />
+              <e p="60.gif" t="Include" />
+              <e p="61.gif" t="Include" />
+              <e p="62.gif" t="Include" />
+              <e p="63.gif" t="Include" />
+              <e p="64.gif" t="Include" />
+              <e p="65.gif" t="Include" />
+              <e p="66.gif" t="Include" />
+              <e p="67.gif" t="Include" />
+              <e p="68.gif" t="Include" />
+              <e p="69.gif" t="Include" />
+              <e p="7.gif" t="Include" />
+              <e p="70.gif" t="Include" />
+              <e p="71.gif" t="Include" />
+              <e p="8.gif" t="Include" />
+              <e p="9.gif" t="Include" />
+            </e>
+          </e>
+          <e p="lay" t="Include">
+            <e p="modules" t="Include">
+              <e p="carousel.js" t="Include" />
+              <e p="code.js" t="Include" />
+              <e p="colorpicker.js" t="Include" />
+              <e p="element.js" t="Include" />
+              <e p="flow.js" t="Include" />
+              <e p="form.js" t="Include" />
+              <e p="jquery.js" t="Include" />
+              <e p="laydate.js" t="Include" />
+              <e p="layedit.js" t="Include" />
+              <e p="layer.js" t="Include" />
+              <e p="laypage.js" t="Include" />
+              <e p="laytpl.js" t="Include" />
+              <e p="mobile.js" t="Include" />
+              <e p="rate.js" t="Include" />
+              <e p="slider.js" t="Include" />
+              <e p="table.js" t="Include" />
+              <e p="transfer.js" t="Include" />
+              <e p="tree.js" t="Include" />
+              <e p="upload.js" t="Include" />
+              <e p="util.js" t="Include" />
+            </e>
+          </e>
+          <e p="layui.all.js" t="Include" />
+          <e p="layui.js" t="Include" />
+        </e>
+        <e p="Models" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="bootstrap.js" t="Include" />
+          <e p="bootstrap.min.js" t="Include" />
+          <e p="jquery-3.3.1.intellisense.js" t="Include" />
+          <e p="jquery-3.3.1.js" t="Include" />
+          <e p="jquery-3.3.1.min.js" t="Include" />
+          <e p="jquery-3.3.1.min.map" t="Include" />
+          <e p="jquery-3.3.1.slim.js" t="Include" />
+          <e p="jquery-3.3.1.slim.min.js" t="Include" />
+          <e p="jquery-3.3.1.slim.min.map" t="Include" />
+          <e p="jquery.validate-vsdoc.js" t="Include" />
+          <e p="jquery.validate.js" t="Include" />
+          <e p="jquery.validate.min.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+          <e p="modernizr-2.8.3.js" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Login" t="Include">
+            <e p="Login.cshtml" t="Include" />
+          </e>
+          <e p="Manager" t="Include">
+            <e p="AddManager.cshtml" t="Include" />
+            <e p="Manager.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+          <e p="Web.config" t="Include" />
+        </e>
+        <e p="Web.config" t="Include" />
+        <e p="Web.csproj" t="IncludeRecursive" />
+        <e p="Web.Debug.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

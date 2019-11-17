@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Manager</title>
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/layui/layui.js"></script>
+
+</head>
+<body>
+
+    <script type="text/html" id="tools">
+        <input type="text" name="where" placeholder="请输入条件" id="where"  lay-event="where" class="layui-input" style="display:inline;width:15%" />
+        <button class="layui-btn layui-btn-warm" lay-event="query">查询</button>&nbsp;&nbsp;&nbsp;
+        <button class="layui-btn layui-btn-normal" lay-event="add">添加</button>
+    </script>
+    <table id="test" lay-filter="test"></table>
+    <center id="addPage" style="display: none">
+        <form action="" class="" id="addform">
+            <table class="layui-table">
+                <tr>
+                    <th><label>姓名</label></th>
+                    <td><input class="layui-input" type="text" name="name" lay-verify="required" placeholder="请输入姓名" /></td>
+                </tr>
+                <tr>
+                    <th><label>收件地址</label></th>
+                    <td><input class="layui-input" type="text" name="addres" lay-verify="required" placeholder="请输入收件地址" /></td>
+                </tr>
+                <tr>
+                    <th><label>电话</label></th>
+                    <td><input class="layui-input" type="number" name="phone" lay-verify="required|phone|number" placeholder="请输入电话" /></td>
+                </tr>
+                <tr>
+                    <th><label>任教科目</label></th>
+                    <td><input class="layui-input" type="text" name="subject" lay-verify="required" placeholder="请输入任教科目" /></td>
+                </tr>
+                <tr>
+                    <th><label>年级</label></th>
+                    <td><input class="layui-input" type="text" name="class" lay-verify="required" placeholder="请输入年级" /></td>
+                </tr>
+                <tr>
+                    <th>时间</th>
+                    <td><input class="layui-input" id="data" placeholder="请选择日期" lay-verify="date" name="logDate" /></td>
+                </tr>
+
+                <tr>
+                    <th><button type="button" ID="submit" class="layui-btn layui-btn-normal">保存</button></th>
+                    <td><button type="reset" class="layui-btn layui-btn-danger">清空重置</button>&nbsp;&nbsp;<span></span></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
+<script src="~/js/Manager.js"></script>

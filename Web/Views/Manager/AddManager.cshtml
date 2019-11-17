@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddManager</title>
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/layui/layui.js"></script>
+</head>
+<body>
+<center >
+    <blockquote class="layui-elem-quote"><h1>赣鄱校园系列活动
+                                             &nbsp;(南康站/于都站/瑞金站) &nbsp;样书申请联系表</h1></blockquote>
+    <form action="" id="addform">
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <thead>
+            <tr>
+                <th>标题</th>
+                <th>输入</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>姓名</th>
+                <td><input class="layui-input" placeholder="请输入姓名" lay-verify="required" name="name"/></td>
+            </tr>
+        
+            <tr>
+                <th>收件地址</th>
+                <td><input class="layui-input" placeholder="请输入收件地址" lay-verify="required" name="addres"/></td>
+            </tr>
+            <tr>
+                <th>电话</th>
+                <td><input class="layui-input" placeholder="请输入电话号码" type="number" lay-verify="required|phone|number" name="phone"/></td>
+            </tr>
+            <tr>
+                <th>任教科目</th>
+                <td><input class="layui-input" placeholder="请输入任教科目" lay-verify="required" name="subject"/></td>
+            </tr>
+            <tr>
+                <th>年级</th>
+                <td><input class="layui-input" placeholder="请输入年级" lay-verify="required" name="class"/></td>
+            </tr>
+            <tr>
+                <th>时间</th>
+                <td><input class="layui-input"  id="data" placeholder="请选择日期"   lay-verify="date" name="logDate"/></td>
+            </tr>
+                
+            <tr>
+                <td>
+                    <button type="button" id="submit"  lay-submit  lay-filter="*"
+                            class="layui-btn layui-btn-normal">保存</button>
+                </td>
+                <td>
+                    <button type="reset" class="layui-btn layui-btn-warm">重置</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+        <script src="~/js/Addmanager.js"></script>
+</center>
+</body>
+</html>
