@@ -33,7 +33,11 @@ namespace BBL
         {
             return new ManagerDAL().ExportExcle(where);
         }
-
+        
+        public static List<mis_manager> ExportExcle(string where,DateTime start,DateTime end)
+        {
+            return new ManagerDAL().ExportExcle(where,start,end);
+        }
         public int AddManagerInfo(mis_manager misManager)
         {
             return new ManagerDAL().AddManagerInfo(misManager);

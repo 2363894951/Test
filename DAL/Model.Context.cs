@@ -27,5 +27,6 @@ namespace DAL
     
         public virtual DbSet<admin> admin { get; set; }
         public virtual DbSet<mis_manager> mis_manager { get; set; }
+        public virtual DbSet<Image> Image { get; set; }
     }
 }

@@ -13,6 +13,15 @@
           <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Url" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UploadTime" Type="datetime" />
+        </EntityType>
         <EntityType Name="mis_manager">
           <Key>
             <PropertyRef Name="id" />
@@ -28,6 +37,7 @@
         </EntityType>
         <EntityContainer Name="helpsModelStoreContainer">
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mis_manager" EntityType="Self.mis_manager" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -37,6 +47,7 @@
         <EntityContainer Name="helpsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="admin" EntityType="helpsModel.admin" />
           <EntitySet Name="mis_manager" EntityType="helpsModel.mis_manager" />
+          <EntitySet Name="Image" EntityType="helpsModel.Image" />
         </EntityContainer>
         <EntityType Name="admin">
           <Key>
@@ -58,6 +69,15 @@
           <Property Name="class" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="logDate" Type="DateTime" Precision="3" />
           <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UploadTime" Type="DateTime" Precision="3" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -85,6 +105,16 @@
                 <ScalarProperty Name="addres" ColumnName="addres" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Image">
+            <EntityTypeMapping TypeName="helpsModel.Image">
+              <MappingFragment StoreEntitySet="Image">
+                <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
