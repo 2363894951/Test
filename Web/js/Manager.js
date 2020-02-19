@@ -1,8 +1,7 @@
-﻿layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider', 'jquery', 'laytpl', 'util'], function(){
+﻿layui.use(['laydate', 'laypage', 'layer','upload', 'table', 'carousel', 'upload', 'element', 'slider', 'jquery', 'laytpl', 'util'], function(){
     var laydate = layui.laydate //日期
         , laytpl = layui.laytpl
         , util = layui.util
-       
         ,laypage = layui.laypage //分页
         ,layer = layui.layer //弹层
         ,table = layui.table //表格
@@ -22,6 +21,31 @@
     //         layer.msg("修改密码和确认密码不一致，请检查！",{icon:3});
     //     }
     // });
+    var uploadInst = upload.render({
+        elem: '#test1'
+        ,url: 'https://httpbin.org/post' //改成您自己的上传接口
+        ,before: function(obj){
+            //预读本地文件示例，不支持ie8
+            obj.preview(function(index, file, result){
+                $('#demo1').attr('src', result); //图片链接（base64）
+            });
+        }
+        ,done: function(res){
+            //如果上传失败
+            if(res.code > 0){
+                return layer.msg('上传失败');
+            }
+            //上传成功
+        }
+        ,error: function(){
+            //演示失败状态，并实现重传
+            var demoText = $('#demoText');
+            demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+            demoText.find('.demo-reload').on('click', function(){
+                uploadInst.upload();
+            });
+        }
+    });
     
     $("#submit").click(function (res) {
         var suer=$("#suerpassworld").val();
@@ -86,6 +110,15 @@
         , value: new Date()
         //或 elem: document.getElementById('test')、elem: lay('#test') 等
     });
+    
+    laydate.render({
+        elem: '#exportstart'
+        , value: new Date()
+    });
+    laydate.render({
+        elem: '#exportend'
+        , value: new Date()
+    });
    var r= table.render({
        elem: '#test',
        id: 'test',
@@ -117,7 +150,12 @@
             ,layEvent = obj.event; //获得 lay-event 对应的值
         if (layEvent === 'export') {
             var where = $("#where").val();
-            window.location.href = "/Manager/ExportExcle?where=" + where + " ";
+            // window.location.href = "/Manager/ExportExcle?where=" + where + " ";
+            layer.open({
+                type: 1,
+                title:'提示',
+                content: $("#exportdata") //这里content是一个普通的String
+            });
 
         }else if (layEvent === 'password') {
             
@@ -129,6 +167,12 @@
         }else if (layEvent === 'out') {
             window.location.replace("/Login/Login");
 
+        }else if (layEvent === 'upload') {
+            layer.open({
+                type: 1,
+                title:'提示',
+                content: $("#uploaddiv") //这里content是一个普通的String
+            });
         }
         else if (layEvent === 'query') {
             var myReg = /^[\u4e00-\u9fa5]+$/;

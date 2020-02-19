@@ -15,6 +15,7 @@
 <body>
 <center >
     <blockquote class="layui-elem-quote"><h6>玟韬实业快递样书申请表</h6></blockquote>
+
     <form action="" id="addform">
         <table class="layui-table">
             <colgroup>
@@ -62,11 +63,18 @@
 
             <tr>
                 <td>
-                    <button type="button" id="submit"  lay-submit  lay-filter="*"
-                            class="layui-btn layui-btn-normal">保存</button>
+                    <button type="reset" class="layui-btn layui-btn-warm">重置</button>
                 </td>
                 <td>
-                    <button type="reset" class="layui-btn layui-btn-warm">重置</button>
+                    <button type="button" id="submit" lay-submit lay-filter="*"
+                            class="layui-btn layui-btn-normal">
+                        申请样书
+                    </button>
+                    <button type="button" id="buy" lay-submit lay-filter="*"
+                            class="layui-btn layui-btn-normal">
+                        购买
+                    </button>
+
                 </td>
             </tr>
             </tbody>

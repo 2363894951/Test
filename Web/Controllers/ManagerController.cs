@@ -13,6 +13,37 @@ namespace Web.Controllers
 {
     public class ManagerController : Controller, System.Web.SessionState.IRequiresSessionState
     {
+        public ActionResult ExportExcle(string where ,DateTime startdata,DateTime enddate) 
+        {
+            List<mis_manager> list = null;
+            if (where.Equals(null)||where==null||where==""||where.Equals(""))
+            {
+                list = ManagerBBL.ExportExcle();//获取List数据 可自行获取
+
+            }
+            else 
+            {
+                list = ManagerBBL.ExportExcle(where,startdata,enddate);//获取List数据 可自行获取
+
+            }
+            Dictionary<string, string> FiedNames = new Dictionary<string, string>();
+            FiedNames.Add("编号", "id");
+            FiedNames.Add("姓名", "name");
+            FiedNames.Add("收件地址", "addres");
+            FiedNames.Add("电话", "phone");
+            FiedNames.Add("任教科目", "subject");
+            FiedNames.Add("年级", "class");
+            FiedNames.Add("时间", "logDate");
+            FiedNames.Add("备注", "remarks");
+            string sExportFileName = "";
+            HSSFWorkbook wb = null;
+            wb = WorkBook.BuildSwitchData<mis_manager>("Sheet1", list, FiedNames);//调用通用方法
+            sExportFileName = "信息" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";//设置下载文件的名称
+            MemoryStream stream = new MemoryStream();
+            wb.Write(stream);
+            var buf = stream.ToArray();
+            return File(buf, "pplication/vnd.ms-excel", sExportFileName);
+        }
         // GET: Manager
         public ActionResult ExportExcle(string where) 
         {

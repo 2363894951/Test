@@ -16,47 +16,116 @@
     </script>
     </head>
 <body>
-    <div style="display: none" id="movepass">
-        <blockquote class="layui-elem-quote"><h6>修改密码</h6></blockquote>
-        <form>
-            <table class="layui-table">
-                <tr>
-                    <td><label class="layui-form-label-col">账户</label></td>
-                    <td><input class="layui-input" type="text" value="@Session["username"]" readonly="readonly" id="username" name="username" /></td>
-                </tr>
-                <tr>
-                    <td><label class="layui-form-label-col">请输入旧密码</label></td>
-                    <td><input class="layui-input" type="password" id="password" name="oldpassworld" /></td>
-                </tr>
-                <tr>
-                    <td><label class="layui-form-label-col">请输入新密码</label></td>
-                    <td><input class="layui-input" type="password" id="newpassworld" name="newpassworld" /></td>
-                </tr>
-                <tr>
-                    <td><label class="layui-form-label-col">请再次确认新密码</label></td>
-                    <td><input class="layui-input" type="password" id="suerpassworld" name="suerpassworld" /></td>
+<div style="display: none" id="uploaddiv">
+        <blockquote class="layui-elem-quote"><h6>请选择图片</h6></blockquote>
+    <table class="layui-table">
+        <tr>
+            <td> <div style="width: 100px;height: 100px" class="layui-upload-list">
+                            <img class="layui-upload-img" id="demo1">
+                    </div>
+            </td>
+            <td>
+                        <button type="button" class="layui-btn" id="test1">上传图片</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="layui-form-label">请输入URL</label>
+            </td>
+            <td>
+                <input type="text" class="layui-input"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="reset" lay-submit class="layui-btn layui-btn-normal">清空</button>
+            </td>
+            <td>
+                <button type="reset" lay-submit class="layui-btn layui-btn-normal">确定</button>
+                <button type="reset" lay-submit class="layui-btn layui-btn-normal">取消</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div style="display: none" id="exportdata">
+        <blockquote class="layui-elem-quote"><h6>请选择导出日期范围</h6></blockquote>
+    <table class="layui-table">
+        <tr>
+            <td>
+                <label class="layui-form-label">起始日期</label>
+            </td>
+            <td>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="exportstart" placeholder="yyyy-MM-dd">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="layui-form-label">结束日期</label>
 
-                </tr>
-                <tr>
-                    <td><button type="button" id="submit" lay-submit class="layui-btn layui-btn-normal">保存</button></td>
-                    <td><button type="reset" lay-submit class="layui-btn layui-btn-normal">清空</button></td>
-                </tr>
-            </table>
-        </form>
-    </div>
-    <script type="text/html" id="tools">
-        <input type="text" name="where" placeholder="请输入条件" id="where" lay-event="where" class="layui-input" style="display:inline;width:10%" />
-        <button class="layui-btn layui-btn-warm  layui-btn-xs" lay-event="query">查询</button>
-        <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="export">导出</button>
-        <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="password">改密</button>
-        <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="out">登出</button>
-    </script>
+            </td>
+            <td>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="exportend" placeholder="yyyy-MM-dd">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="reset" lay-submit class="layui-btn layui-btn-normal">取消</button>
 
-    <div class="layui-container">
-        <div class="layui-row">
-            <table id="test" lay-filter="test"></table>
-        </div>
+            </td>
+            <td>
+                <button type="reset" lay-submit class="layui-btn layui-btn-normal">确定</button>
+
+            </td>
+        </tr>
+    </table>
+</div>
+<div style="display: none" id="movepass">
+    <blockquote class="layui-elem-quote"><h6>修改密码</h6></blockquote>
+    <form>
+        <table class="layui-table">
+            <tr>
+                <td><label class="layui-form-label-col">账户</label></td>
+                <td><input class="layui-input" type="text" value="@Session["username"]" readonly="readonly" id="username" name="username"/></td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label-col">请输入旧密码</label></td>
+                <td><input class="layui-input" type="password" id="password" name="oldpassworld"/></td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label-col">请输入新密码</label></td>
+                <td><input class="layui-input" type="password" id="newpassworld" name="newpassworld"/></td>
+            </tr>
+            <tr>
+                <td><label class="layui-form-label-col">请再次确认新密码</label></td>
+                <td><input class="layui-input" type="password" id="suerpassworld" name="suerpassworld"/></td>
+
+            </tr>
+            <tr>
+                <td><button type="button" id="submit" lay-submit class="layui-btn layui-btn-normal">保存</button></td>
+                <td><button type="reset" lay-submit class="layui-btn layui-btn-normal">清空</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script type="text/html" id="tools">
+    <input type="text" name="where" placeholder="请输入条件" id="where" lay-event="where" class="layui-input" style="display:inline;width:10%"/>
+    <button class="layui-btn layui-btn-warm  layui-btn-xs" lay-event="query">查询</button>
+    <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="export">导出</button>
+    <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="password">改密</button>
+    <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="out">登出</button>
+    <button class="layui-btn layui-btn-normal layui-btn-xs" lay-event="upload">上传封面</button>
+
+</script>
+
+<div class="layui-container">
+    <div class="layui-row">
+        <table id="test" lay-filter="test"></table>
     </div>
+</div>
 </body>
 </html>
 <script src="~/js/Manager.js"></script>
